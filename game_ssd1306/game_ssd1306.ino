@@ -57,6 +57,8 @@ void setup() {
 
   display.display();
 
+  resetHighscore();
+
 }
 
 void loop() {
@@ -92,6 +94,10 @@ void loop() {
     dino_game_input_handle();
   }
 
+}
+
+void resetHighscore(){
+  EEPROM.write(0, (uint16_t) 0);
 }
 
 void getHighscore() {
